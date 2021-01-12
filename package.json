@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/meirelesgabriel/node-todo.git"
+    "url": "git+https://github.com/meirelesgabriel/nodetodo.git"
   },
   "author": "Gabriel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/meirelesgabriel/node-todo/issues"
+    "url": "https://github.com/meirelesgabriel/nodetodo/issues"
   },
-  "homepage": "https://github.com/meirelesgabriel/node-todo#readme",
+  "homepage": "https://github.com/meirelesgabriel/nodetodo#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "ejs": "^3.1.5",
