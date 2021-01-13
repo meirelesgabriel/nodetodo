@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 module.exports = function(app) {
 
     app.use(bodyParser.json());
-    app.use(bodyParser.urlenconded({ extended: true }));
+    app.use(bodyParser.urlencoded({ extended: true }));
 
     app.get('/api/todos/:uname', function(req, res) {
 
@@ -26,15 +26,18 @@ module.exports = function(app) {
 
     });
 
-    app.post('api/todo', function(req, res) {
+    app.post('/api/todo', function(req, res) {
 
         if (req.body.id) {
             Todos.findByIdAndUpdate(req.body.id, { todo: req.body.todo, isDone: req.body.isDone, hasAttachment: req.body.hasAttachment }, function(err, todo) {
                 if (err) throw err;
 
-                res.send('Sucess');
+                res.send('Success');
             });
-        } else {
+        } 
+        
+        else {
+            
             var newTodo = Todos({
                 username: 'test',
                 todo: req.body.todo,
